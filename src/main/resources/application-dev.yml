@@ -1,0 +1,59 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306}/ecommercedb?createDatabaseIfNotExist=true
+    username: root
+    password: admin123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+  sql:
+    init:
+      mode: always
+
+# Email configuration
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: posgrado.ecommerce@gmail.com
+    password: isnxrddwloyifmiy
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+    default-encoding: UTF-8
+
+
+#swagger configuration
+app-swagger:
+  title: Service Ecommerce
+  description: product ecommerce posgrado
+  version: '1.0'
+  email: gustavo.claure.f@gmail.com
+  name-business: Posgrado
+  url: #
+  terms-of-service: POSGRADO
+  license-name: Licence
+  license-url: '#'
+springdoc:
+  swagger-ui:
+    tags-sorter: alpha
+  remove-broken-reference-definitions: true
+
+# Jwt config
+jwt-config:
+  secret-token: tICfY8YXF6E6h0O7dMuCcqnLCRRhgxMlXrcJoq2zkGobUM4vBnTAV1jMi1yO
+  secret-refresh-token: slOGArGveyauCMOfR3bDK64hTtzbDjVOkgpNUHLeYmFWtVvokFCHyhUXdPoa
+  expire-toke-minutes: 60
+  expire-refresh-token-minutes: 80
+
+
