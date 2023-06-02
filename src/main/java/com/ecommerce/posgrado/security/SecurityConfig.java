@@ -1,5 +1,7 @@
 package com.ecommerce.posgrado.security;
 
+import com.ecommerce.posgrado.config.IgnorePathSecurityConfig;
+import com.ecommerce.posgrado.config.IgnorePathSwaggerConfig;
 import com.ecommerce.posgrado.security.jwt.JwtAuthenticationFilter;
 import com.ecommerce.posgrado.security.jwt.JwtEntryPointSecurity;
 import org.springframework.context.annotation.Bean;
@@ -26,10 +28,18 @@ public class SecurityConfig {
 
     private final JwtEntryPointSecurity jwtEntryPointSecurity;
 
+    private final IgnorePathSwaggerConfig ignorePathSwaggerConfig;
+
+    private final IgnorePathSecurityConfig ignorePathSecurityConfig;
+
     public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter,
-                          JwtEntryPointSecurity jwtEntryPointSecurity) {
+                          JwtEntryPointSecurity jwtEntryPointSecurity,
+                          IgnorePathSwaggerConfig ignorePathSwaggerConfig,
+                          IgnorePathSecurityConfig ignorePathSecurityConfig) {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
         this.jwtEntryPointSecurity = jwtEntryPointSecurity;
+        this.ignorePathSwaggerConfig = ignorePathSwaggerConfig;
+        this.ignorePathSecurityConfig = ignorePathSecurityConfig;
     }
 
     @Bean
@@ -40,17 +50,8 @@ public class SecurityConfig {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .antMatchers(
-                        "/api/v1/auth/**",
-                        "/v3/api-docs/**",
-                        "/swagger-ui/**",
-                        "/swagger-ui.html"
-                )
-                .permitAll()
-                .antMatchers("/api/v1/product/**",
-                        "/api/v1/category",
-                        "/api/v1/category/**",
-                        "/api/v1/order/**").permitAll()
+                .antMatchers(this.ignorePathSwaggerConfig.getPaths()).permitAll()
+                .antMatchers(this.ignorePathSecurityConfig.getPaths()).permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()

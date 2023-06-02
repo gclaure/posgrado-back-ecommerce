@@ -56,4 +56,19 @@ jwt-config:
   expire-toke-minutes: 60
   expire-refresh-token-minutes: 80
 
+# ignore path Swagger security
+ignored-swagger:
+  paths:
+    - /swagger-ui.html
+    - /v3/api-docs/**
+    - /swagger-ui/**
+# ignore path security
+ignored-security:
+  paths:
+    - /api/v1/auth/**
+    - /api/v1/product/**
+    - /api/v1/category
+    - /api/v1/category/**
+    - /api/v1/order/**
+
 
