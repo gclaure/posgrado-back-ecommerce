@@ -1,7 +1,7 @@
 package com.ecommerce.posgrado.entity;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 21:07 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 21:07 Project Name: posgrado
  */
 public enum OrderStateEnum {
     PENDING,

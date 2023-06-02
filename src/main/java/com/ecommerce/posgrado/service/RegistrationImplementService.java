@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 21:56
  * Project Name: posgrado

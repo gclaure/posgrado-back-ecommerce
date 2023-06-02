@@ -3,7 +3,7 @@ package com.ecommerce.posgrado.service;
 import com.ecommerce.posgrado.entity.ConfirmationTokenEntity;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 21:17
  * Project Name: posgrado

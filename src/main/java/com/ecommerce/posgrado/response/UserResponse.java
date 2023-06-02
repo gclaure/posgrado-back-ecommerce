@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/20/23
  * Time: 23:50
  * Project Name: posgrado

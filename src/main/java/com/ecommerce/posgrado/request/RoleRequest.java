@@ -5,7 +5,7 @@ import lombok.Getter;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 20:27
  * Project Name: posgrado

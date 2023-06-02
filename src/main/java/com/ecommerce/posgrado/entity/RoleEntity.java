@@ -13,7 +13,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 /**
- * @author gclaure from CochaSoft Date: 5/18/23 Time: 20:21 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/18/23 Time: 20:21 Project Name: posgrado
  */
 @Getter
 @Setter

@@ -4,7 +4,6 @@ import com.ecommerce.posgrado.controller.Constants;
 import com.ecommerce.posgrado.response.PageResponse;
 import com.ecommerce.posgrado.service.ProductInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.data.domain.Sort;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/21/23
  * Time: 01:37
  * Project Name: posgrado
@@ -32,7 +31,6 @@ public class GetFilterPageProduct {
     }
 
     @Operation(summary = "Lista de productos con filtros y paginacion")
-    @SecurityRequirement(name = Constants.security.AUTHORIZATION)
     @GetMapping
     public PageResponse getLisPage(@RequestParam(required = false) Double minPrice,
                                    @RequestParam(required = false) Double maxPrice,

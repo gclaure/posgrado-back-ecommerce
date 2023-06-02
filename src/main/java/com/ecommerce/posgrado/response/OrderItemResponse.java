@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 21:42
  * Project Name: posgrado

@@ -6,7 +6,7 @@ import com.ecommerce.posgrado.response.UserResponse;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 21:27 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 21:27 Project Name: posgrado
  */
 public interface UserInterfaceService {
 

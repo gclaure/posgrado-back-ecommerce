@@ -7,7 +7,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 22:21
  * Project Name: posgrado
@@ -23,7 +23,7 @@ public class EmailConfirmAuth {
         this.service = service;
     }
 
-    @Operation(summary = "Confirmar correo electronico")
+    @Operation(summary = "Confirmar correo electronico", description = Constants.auth.PUBLIC_ACCESS)
     @GetMapping("/confirm")
     public String confirm(@RequestParam String token) {
         return this.service.confirm(token);

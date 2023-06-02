@@ -6,7 +6,7 @@ import java.util.UUID;
 import lombok.Getter;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 22:35 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 22:35 Project Name: posgrado
  */
 @Getter
 public class ProductRequest {

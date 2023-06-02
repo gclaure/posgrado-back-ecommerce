@@ -18,7 +18,7 @@ import java.io.PrintWriter;
 import java.time.LocalDateTime;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/31/23
  * Time: 21:54
  * Project Name: posgrado

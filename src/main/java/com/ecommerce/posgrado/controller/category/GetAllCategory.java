@@ -4,7 +4,6 @@ import com.ecommerce.posgrado.controller.Constants;
 import com.ecommerce.posgrado.entity.CategoryEntity;
 import com.ecommerce.posgrado.service.CategoryInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/21/23
  * Time: 01:12
  * Project Name: posgrado
@@ -29,8 +28,7 @@ public class GetAllCategory {
         this.service = service;
     }
 
-    @Operation(summary = "Lista de categorias")
-    @SecurityRequirement(name = Constants.security.AUTHORIZATION)
+    @Operation(summary = "Lista de categorias", description = Constants.category.PUBLIC_ACCESS)
     @GetMapping
     public List<CategoryEntity> getAll() {
         return this.service.getAll();

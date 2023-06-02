@@ -9,7 +9,7 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * @author gclaure from CochaSoft Date: 5/18/23 Time: 21:40 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/18/23 Time: 21:40 Project Name: posgrado
  */
 public interface UserRepository extends JpaRepository<UserEntity, UUID> {
 

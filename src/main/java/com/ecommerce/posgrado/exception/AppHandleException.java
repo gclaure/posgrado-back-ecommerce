@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 22:19 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 22:19 Project Name: posgrado
  */
 public class AppHandleException extends RuntimeException {
 

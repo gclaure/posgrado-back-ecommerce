@@ -8,7 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/31/23
  * Time: 23:16
  * Project Name: posgrado
@@ -24,7 +24,7 @@ public class GetUserAuth {
         this.service = service;
     }
 
-    @Operation(summary = "Get User data")
+    @Operation(summary = "Get User data", description = Constants.auth.PUBLIC_ACCESS)
     @PostMapping("/getUser")
     public UserResponse getUser(@RequestHeader String token) {
         return this.service.me(token);

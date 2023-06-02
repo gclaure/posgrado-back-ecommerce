@@ -4,14 +4,13 @@ import com.ecommerce.posgrado.controller.Constants;
 import com.ecommerce.posgrado.response.OrderResponse;
 import com.ecommerce.posgrado.service.OrderInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 23:08
  * Project Name: posgrado
@@ -27,8 +26,7 @@ public class GetOrder {
         this.service = service;
     }
 
-    @Operation(summary = "Ver Orden por id")
-    @SecurityRequirement(name = Constants.security.AUTHORIZATION)
+    @Operation(summary = "Ver Orden por id", description = Constants.order.PUBLIC_ACCESS)
     @GetMapping("/{orderId}")
     public OrderResponse getOrderByid(@PathVariable UUID orderId){
         return this.service.getById(orderId);

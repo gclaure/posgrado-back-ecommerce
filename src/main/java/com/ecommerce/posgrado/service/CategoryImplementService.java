@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 19:55 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 19:55 Project Name: posgrado
  */
 @Service
 public class CategoryImplementService implements CategoryInterfaceService {

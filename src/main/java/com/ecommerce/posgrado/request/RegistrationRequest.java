@@ -3,7 +3,7 @@ package com.ecommerce.posgrado.request;
 import lombok.Getter;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 21:55
  * Project Name: posgrado

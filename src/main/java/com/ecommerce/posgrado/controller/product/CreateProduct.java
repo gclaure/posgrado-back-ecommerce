@@ -7,6 +7,7 @@ import com.ecommerce.posgrado.service.ProductInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/21/23
  * Time: 01:28
  * Project Name: posgrado
@@ -31,8 +32,9 @@ public class CreateProduct {
         this.service = service;
     }
 
-    @Operation(summary = "Crear nuevo producto")
+    @Operation(summary = "Crear nuevo producto", description = Constants.product.ROLE_ACCESS)
     @SecurityRequirement(name = Constants.security.AUTHORIZATION)
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping
     public ProductEntity create(@Valid @RequestBody ProductRequest request) {
         return this.service.create(request);

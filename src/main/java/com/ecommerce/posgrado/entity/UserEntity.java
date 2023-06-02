@@ -22,7 +22,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
- * @author gclaure from CochaSoft Date: 5/18/23 Time: 20:33 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/18/23 Time: 20:33 Project Name: posgrado
  */
 @Getter
 @Setter

@@ -10,7 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 21:32 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 21:32 Project Name: posgrado
  */
 public interface ProductInterfaceService {
 

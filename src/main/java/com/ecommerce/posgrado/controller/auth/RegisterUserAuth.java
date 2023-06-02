@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 22:26
  * Project Name: posgrado
@@ -26,7 +26,7 @@ public class RegisterUserAuth {
         this.service = service;
     }
 
-    @Operation(summary = "Registro de nuevo Usuario")
+    @Operation(summary = "Registro de nuevo Usuario", description = Constants.auth.PUBLIC_ACCESS)
     @PostMapping("/register")
     public String register(@Valid @RequestBody RegistrationRequest request) {
         return this.service.register(request);

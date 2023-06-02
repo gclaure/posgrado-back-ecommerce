@@ -13,7 +13,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Florest
  * Date: 5/31/23
  * Time: 22:01
  * Project Name: posgrado

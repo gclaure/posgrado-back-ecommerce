@@ -5,7 +5,7 @@ import com.ecommerce.posgrado.response.LoginResponse;
 import com.ecommerce.posgrado.response.UserResponse;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/31/23
  * Time: 21:59
  * Project Name: posgrado

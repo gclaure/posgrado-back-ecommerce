@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/31/23
  * Time: 21:28
  * Project Name: posgrado
@@ -27,7 +27,7 @@ public class LoginAuth {
         this.service = service;
     }
 
-    @Operation(summary = "Login")
+    @Operation(summary = "Login", description = Constants.auth.PUBLIC_ACCESS)
     @PostMapping("/login")
     public LoginResponse login(@Valid @RequestBody LoginRequest request) {
         return this.service.login(request);

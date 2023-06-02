@@ -6,7 +6,7 @@ import com.ecommerce.posgrado.request.RoleRequest;
 import java.util.List;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 21:31 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 21:31 Project Name: posgrado
  */
 public interface RoleInterfaceService {
 

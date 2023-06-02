@@ -4,6 +4,7 @@ import com.ecommerce.posgrado.security.jwt.JwtAuthenticationFilter;
 import com.ecommerce.posgrado.security.jwt.JwtEntryPointSecurity;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -11,12 +12,13 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/29/23
  * Time: 20:10
  * Project Name: posgrado
  */
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 @Configuration
 public class SecurityConfig {
 
@@ -45,6 +47,10 @@ public class SecurityConfig {
                         "/swagger-ui.html"
                 )
                 .permitAll()
+                .antMatchers("/api/v1/product/**",
+                        "/api/v1/category",
+                        "/api/v1/category/**",
+                        "/api/v1/order/**").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()

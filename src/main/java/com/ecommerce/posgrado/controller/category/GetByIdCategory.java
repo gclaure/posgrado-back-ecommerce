@@ -4,7 +4,6 @@ import com.ecommerce.posgrado.controller.Constants;
 import com.ecommerce.posgrado.entity.CategoryEntity;
 import com.ecommerce.posgrado.service.CategoryInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/21/23
  * Time: 01:06
  * Project Name: posgrado
@@ -30,8 +29,7 @@ public class GetByIdCategory {
         this.service = service;
     }
 
-    @Operation(summary = "Buscar categoria por id")
-    @SecurityRequirement(name = Constants.security.AUTHORIZATION)
+    @Operation(summary = "Buscar categoria por id", description = Constants.category.PUBLIC_ACCESS)
     @GetMapping("{id}")
     public CategoryEntity getById(@PathVariable UUID id) {
         return this.service.getById(id);

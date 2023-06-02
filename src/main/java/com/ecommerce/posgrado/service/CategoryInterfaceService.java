@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 19:53 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 19:53 Project Name: posgrado
  */
 public interface CategoryInterfaceService {
 

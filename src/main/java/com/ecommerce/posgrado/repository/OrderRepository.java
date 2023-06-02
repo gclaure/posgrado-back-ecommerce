@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 20:49 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 20:49 Project Name: posgrado
  */
 public interface OrderRepository extends JpaRepository<OrderEntity, UUID> {
 

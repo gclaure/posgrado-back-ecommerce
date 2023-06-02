@@ -7,7 +7,7 @@ import lombok.Getter;
 import java.util.List;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/21/23
  * Time: 00:46
  * Project Name: posgrado

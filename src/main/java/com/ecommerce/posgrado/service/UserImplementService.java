@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 21:27 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 21:27 Project Name: posgrado
  */
 @Service
 public class UserImplementService implements UserInterfaceService {

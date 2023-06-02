@@ -3,7 +3,7 @@ package com.ecommerce.posgrado.util;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 22:15
  * Project Name: posgrado

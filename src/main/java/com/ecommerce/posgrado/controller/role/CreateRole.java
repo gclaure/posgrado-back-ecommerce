@@ -9,12 +9,13 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 20:36
  * Project Name: posgrado
@@ -30,8 +31,9 @@ public class CreateRole {
         this.service = service;
     }
 
-    @Operation(summary = "Crear nuevo rol")
+    @Operation(summary = "Crear nuevo rol", description = Constants.role.ROLE_ACCESS)
     @SecurityRequirement(name = Constants.security.AUTHORIZATION)
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping
     public ResponseEntity<RoleEntity> createRole(@Valid @RequestBody RoleRequest request) {
         return new ResponseEntity<>(this.service.createRole(request), HttpStatus.CREATED);

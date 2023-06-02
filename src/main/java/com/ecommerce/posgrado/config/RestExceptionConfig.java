@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.security.sasl.AuthenticationException;
 
 /**
- * @author gclaure from CochaSoft Date: 5/20/23 Time: 22:26 Project Name: posgrado
+ * @author gclaure Gustavo Claure Flores Date: 5/20/23 Time: 22:26 Project Name: posgrado
  */
 @ControllerAdvice
 public class RestExceptionConfig {

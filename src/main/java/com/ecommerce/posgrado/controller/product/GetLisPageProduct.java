@@ -4,7 +4,6 @@ import com.ecommerce.posgrado.controller.Constants;
 import com.ecommerce.posgrado.entity.ProductEntity;
 import com.ecommerce.posgrado.service.ProductInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Page;
@@ -12,7 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/21/23
  * Time: 01:34
  * Project Name: posgrado
@@ -29,7 +28,6 @@ public class GetLisPageProduct {
     }
 
     @Operation(summary = "Lista de Producto con paginacion")
-    @SecurityRequirement(name = Constants.security.AUTHORIZATION)
     @GetMapping("/pageable")
     public Page<ProductEntity> getLisPage(@RequestParam Integer page, @RequestParam Integer size) {
         Pageable pageable = PageRequest.of(page, size);

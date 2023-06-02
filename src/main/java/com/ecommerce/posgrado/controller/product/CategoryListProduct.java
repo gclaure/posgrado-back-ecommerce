@@ -4,7 +4,6 @@ import com.ecommerce.posgrado.controller.Constants;
 import com.ecommerce.posgrado.response.PageResponse;
 import com.ecommerce.posgrado.service.ProductInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 20:00
  * Project Name: posgrado
@@ -31,7 +30,6 @@ public class CategoryListProduct {
     }
 
     @Operation(summary = "Lista de productos por categoria")
-    @SecurityRequirement(name = Constants.security.AUTHORIZATION)
     @GetMapping("/category/{categoryId}/get")
     public PageResponse listProductByCategory(@PathVariable UUID categoryId,
                                               @RequestParam(defaultValue = "0") int page,

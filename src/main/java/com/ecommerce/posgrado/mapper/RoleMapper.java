@@ -5,7 +5,7 @@ import com.ecommerce.posgrado.request.RoleRequest;
 import org.springframework.stereotype.Component;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 6/1/23
  * Time: 20:30
  * Project Name: posgrado

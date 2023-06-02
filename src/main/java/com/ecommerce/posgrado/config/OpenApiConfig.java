@@ -10,7 +10,7 @@ import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author gclaure from CochaSoft
+ * @author gclaure Gustavo Claure Flores
  * Date: 5/20/23
  * Time: 23:12
  * Project Name: posgrado
