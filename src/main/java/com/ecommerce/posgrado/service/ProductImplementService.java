@@ -8,7 +8,6 @@ import com.ecommerce.posgrado.repository.ProductRepository;
 import com.ecommerce.posgrado.request.ProductRequest;
 
 import java.math.RoundingMode;
-import java.util.List;
 import java.util.UUID;
 
 import com.ecommerce.posgrado.response.PageResponse;

@@ -1,7 +1,6 @@
 package com.ecommerce.posgrado.service;
 
 import com.ecommerce.posgrado.entity.ConfirmationTokenEntity;
-import com.ecommerce.posgrado.request.ConfirmationTokenRequest;
 
 /**
  * @author gclaure from CochaSoft

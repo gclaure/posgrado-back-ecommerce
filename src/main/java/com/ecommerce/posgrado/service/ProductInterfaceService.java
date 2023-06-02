@@ -3,7 +3,6 @@ package com.ecommerce.posgrado.service;
 import com.ecommerce.posgrado.entity.ProductEntity;
 import com.ecommerce.posgrado.request.ProductRequest;
 
-import java.util.List;
 import java.util.UUID;
 
 import com.ecommerce.posgrado.response.PageResponse;
@@ -15,16 +14,16 @@ import org.springframework.data.domain.Pageable;
  */
 public interface ProductInterfaceService {
 
-  ProductEntity create(ProductRequest request);
+    ProductEntity create(ProductRequest request);
 
-  ProductEntity updateProduct(ProductRequest request, UUID productId);
+    ProductEntity updateProduct(ProductRequest request, UUID productId);
 
-  ProductEntity getById(UUID id);
+    ProductEntity getById(UUID id);
 
-  PageResponse listProductByCategory(UUID categoryId, Pageable pageable);
+    PageResponse listProductByCategory(UUID categoryId, Pageable pageable);
 
-  Page<ProductEntity> getProducts(Pageable pageable);
+    Page<ProductEntity> getProducts(Pageable pageable);
 
-  PageResponse getFilteredProducts(Double minPrice, Double maxPrice, Pageable pageable);
+    PageResponse getFilteredProducts(Double minPrice, Double maxPrice, Pageable pageable);
 
 }

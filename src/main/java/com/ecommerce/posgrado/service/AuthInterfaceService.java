@@ -1,6 +1,5 @@
 package com.ecommerce.posgrado.service;
 
-import com.ecommerce.posgrado.entity.UserEntity;
 import com.ecommerce.posgrado.request.LoginRequest;
 import com.ecommerce.posgrado.response.LoginResponse;
 import com.ecommerce.posgrado.response.UserResponse;

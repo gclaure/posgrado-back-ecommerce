@@ -1,8 +1,6 @@
 package com.ecommerce.posgrado.controller.product;
 
 import com.ecommerce.posgrado.controller.Constants;
-import com.ecommerce.posgrado.entity.ProductEntity;
-import com.ecommerce.posgrado.request.ProductRequest;
 import com.ecommerce.posgrado.response.PageResponse;
 import com.ecommerce.posgrado.service.ProductInterfaceService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -13,7 +11,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.UUID;
 
 /**

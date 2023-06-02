@@ -3,7 +3,6 @@ package com.ecommerce.posgrado.service;
 import com.ecommerce.posgrado.entity.ConfirmationTokenEntity;
 import com.ecommerce.posgrado.exception.AppHandleException;
 import com.ecommerce.posgrado.repository.ConfirmationTokenRepository;
-import com.ecommerce.posgrado.request.ConfirmationTokenRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,7 @@
 package com.ecommerce.posgrado.security;
 
 import com.ecommerce.posgrado.security.jwt.JwtAuthenticationFilter;
+import com.ecommerce.posgrado.security.jwt.JwtEntryPointSecurity;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -21,8 +22,12 @@ public class SecurityConfig {
 
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
-    public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter) {
+    private final JwtEntryPointSecurity jwtEntryPointSecurity;
+
+    public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter,
+                          JwtEntryPointSecurity jwtEntryPointSecurity) {
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
+        this.jwtEntryPointSecurity = jwtEntryPointSecurity;
     }
 
     @Bean
@@ -44,7 +49,7 @@ public class SecurityConfig {
                 .authenticated()
                 .and()
                 .exceptionHandling()
-//                .authenticationEntryPoint(jwtEntryPointSecurity)
+                .authenticationEntryPoint(this.jwtEntryPointSecurity)
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

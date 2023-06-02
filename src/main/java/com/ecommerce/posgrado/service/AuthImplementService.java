@@ -12,8 +12,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 /**
  * @author gclaure from CochaSoft
  * Date: 5/31/23

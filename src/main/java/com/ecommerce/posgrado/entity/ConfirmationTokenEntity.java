@@ -31,8 +31,10 @@ public class ConfirmationTokenEntity implements Serializable {
 
     @Column(nullable = false)
     private String token;
+
     @Column(nullable = false)
     private LocalDateTime createdAt;
+
     @Column(nullable = false)
     private LocalDateTime expiresAt;
 

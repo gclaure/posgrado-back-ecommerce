@@ -7,13 +7,11 @@ import com.ecommerce.posgrado.entity.UserEntity;
 import com.ecommerce.posgrado.exception.AppHandleException;
 import com.ecommerce.posgrado.repository.OrderRepository;
 import com.ecommerce.posgrado.request.OrderRequest;
-import com.ecommerce.posgrado.response.OrderItemInterfaceResponse;
 import com.ecommerce.posgrado.response.OrderResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;

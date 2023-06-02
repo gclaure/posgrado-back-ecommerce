@@ -2,7 +2,6 @@ package com.ecommerce.posgrado.security;
 
 import com.ecommerce.posgrado.security.jwt.JwtAuthenticationProvider;
 import com.ecommerce.posgrado.security.jwt.JwtImplementService;
-import com.ecommerce.posgrado.security.jwt.JwtInterfaceService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -12,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 /**
  * @author gclaure from CochaSoft
@@ -34,7 +33,7 @@ public class CreateRole {
     @Operation(summary = "Crear nuevo rol")
     @SecurityRequirement(name = Constants.security.AUTHORIZATION)
     @PostMapping
-    public ResponseEntity<RoleEntity> createRole(@Valid @RequestBody RoleRequest request){
+    public ResponseEntity<RoleEntity> createRole(@Valid @RequestBody RoleRequest request) {
         return new ResponseEntity<>(this.service.createRole(request), HttpStatus.CREATED);
     }
 
